@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopFlow | Sklep</title>
+    <meta
+      name="description"
+      content="Nowoczesny sklep internetowy z elektroniką, akcesoriami i produktami codziennymi."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand-wrap">
+          <div class="brand-mark">S</div>
+          <div class="brand-text">ShopFlow</div>
+        </div>
+
+        <nav class="menu">
+          <a href="#home">Start</a>
+          <a href="#new">Nowości</a>
+          <a href="#products">Produkty</a>
+          <a href="#offers">Promocje</a>
+          <a href="#about">O nas</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button" aria-label="Szukaj">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.94 12.56l4.56 4.56 1.41-1.41-4.56-4.56A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+          </button>
+          <button class="cart-button" id="cartToggle" aria-label="Koszyk">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 110 4 2 2 0 010-4zm10 0a2 2 0 110 4 2 2 0 010-4zM6.2 6h15.1l-1.7 8.2a2 2 0 01-2 1.6H9.3a2 2 0 01-2-1.6L5.3 3H2V1h4l.4 2H21a1 1 0 011 1l-1.8 9.2A3 3 0 0117.2 15H9.1a3 3 0 01-2.9-2.3L5.1 5H4.5L6.2 6z"/></svg>
+            <span>Koszyk</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Nowa kolekcja</span>
+            <h1>Wybierz produkty, które podnoszą jakość każdego dnia.</h1>
+            <p>
+              Odkryj nowoczesne rozwiązania do domu, pracy i życia codziennego —
+              od elektroniki po akcesoria i dodatki premium.
+            </p>
+            <div class="hero-actions">
+              <a href="#products" class="primary-btn">Zobacz ofertę</a>
+              <a href="#offers" class="secondary-btn">Promocje</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>10k+</strong><span>zadowolonych klientów</span></li>
+              <li><strong>24h</strong><span>wysyłka</span></li>
+              <li><strong>4.9/5</strong><span>ocena</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="product-showcase">
+              <div class="badge badge-top">Top seller</div>
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                alt="Buty sportowe"
+              />
+              <div class="showcase-info">
+                <div>
+                  <span>AirFlex Pro</span>
+                  <strong>599 zł</strong>
+                </div>
+                <button class="mini-btn">Dodaj</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories container" id="new">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Kategorie</span>
+            <h2>Najpopularniejsze</h2>
+          </div>
+          <a href="#products">Zobacz wszystkie</a>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card accent-1">
+            <span>Elektronika</span>
+            <strong>Nowe modele</strong>
+          </article>
+          <article class="category-card accent-2">
+            <span>Dom</span>
+            <strong>Styl i wygoda</strong>
+          </article>
+          <article class="category-card accent-3">
+            <span>Moda</span>
+            <strong>Codzienny look</strong>
+          </article>
+          <article class="category-card accent-4">
+            <span>Sport</span>
+            <strong>Aktywność</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="products container" id="products">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Oferta</span>
+            <h2>Produkty dnia</h2>
+          </div>
+          <div class="filters" aria-label="Filtry produktów">
+            <button class="filter-btn active" data-filter="all">Wszystko</button>
+            <button class="filter-btn" data-filter="electronics">Elektronika</button>
+            <button class="filter-btn" data-filter="home">Dom</button>
+            <button class="filter-btn" data-filter="fashion">Moda</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="promo container" id="offers">
+        <div class="promo-banner">
+          <div>
+            <span class="eyebrow light">Weekendowa wyprzedaż</span>
+            <h3>Do -30% na wybrane produkty</h3>
+          </div>
+          <button class="primary-btn">Kup teraz</button>
+        </div>
+      </section>
+
+      <section class="benefits container" id="about">
+        <div class="benefit-item">
+          <div class="benefit-icon">🚚</div>
+          <div>
+            <h4>Darmowa wysyłka</h4>
+            <p>Przy zamówieniach powyżej 299 zł.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🔒</div>
+          <div>
+            <h4>Bezpieczne płatności</h4>
+            <p>SSL i nowoczesne metody zapłaty.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💬</div>
+          <div>
+            <h4>Wsparcie 24/7</h4>
+            <p>Pomoc od profesjonalnego zespołu.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Koszyk zakupowy">
+      <div class="cart-header">
+        <h3>Koszyk</h3>
+        <button class="close-cart" id="closeCart" aria-label="Zamknij koszyk">×</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Łącznie</span>
+          <strong id="cartTotal">0 zł</strong>
+        </div>
+        <button class="checkout-btn">Przejdź do zapłaty</button>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
